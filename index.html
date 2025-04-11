@@ -5,19 +5,34 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>sobre mim</title>
+
+        <!-- CSS Reset -->
+        <link rel="stylesheet" href="reset.css">
+
+        <!-- CSS externo (arquivo style) -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- CSS interno (tag style) -->
+        <style>
+            /* body{
+                background-color: #00ff00 ;
+            } */
+        </style>
     </head>
-    <!-- HTML NÃO TE PESCOÇO! -->
     <body>
-        <header>
+        <header> 
+    
+            <nav>
             <ul>
                 <li><a href="#sobreMim">Sobre mim</a></li>
-                <li><a href="#formaçãoAcademica">Formação acadêmica</a></li>
+                <li><a href="#formaçãoAcademica">Formação</a></li>
                 <li><a href="#hardSkills">Hard skills</a></li>
                 <li><a href="#softSkills">Soft skills</a></li>
-                <li><a href="#meusProjetos">Meus projetos</a></li>
-                <li><a href="#meusArtigos">Meus artigos</a></li>
-                <li><a href="#rodape">rodapé</a></li>
+                <li><a href="#meusProjetos">Projetos</a></li>
+                <li><a href="#meusArtigos">Artigos</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
+        </nav>
         </header>
 
         <section id="sobreMim">
@@ -95,6 +110,17 @@
             <h2>Meus artigos</h2>
         </section>
 
+        <section id="contato">
+            <h2>Entre em contato comigo</h2>
+            <form>
+                <input type="text" name="nome">
+                <input type="email" name="email">
+                <textarea name="mensagem" rows="5" cols="50"></textarea>
+                <input type="submit" name="botaoEnviar" value="solicitar contato">
+            
+            </form>
+        </section>
+
         <footer id="rodape">
             <p>Links úteis</p>
 
@@ -106,7 +132,7 @@
                 <a href="https://github.com/JoaoRoccella" target="_blank">Portfólio do meu professor</a>
                 </p>
                 
-            <p>Copyright</p>
+            <p>desenvolvido do ❤️ por leonardo</p>
         </footer>
         
     </body>
