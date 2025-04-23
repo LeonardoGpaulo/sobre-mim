@@ -70,9 +70,9 @@ header {
     text-align: center;
 }
 
-section a:hover {
-    background-color: var(--cor-primaria);
-}
+ section a:hover {
+    background-color: rgb(234, 204, 228);
+} 
 
 header ul {
     display: flex;
@@ -113,6 +113,7 @@ section#hardSkills,
 section#softSkills,
 section#meusProjetos,
 section#sobreMim,
+section#meusArtigos,
 section#contato{
     border: none
 }
@@ -124,6 +125,7 @@ section#contato{
 
 #sobreMim{
     display:block;
+    padding: 4rem 10rem;
 }
 
 #sobreMim img {
@@ -138,7 +140,14 @@ section#contato{
 #sobreMim p{
     text-align: justify;
     bottom: 1rem;
-    line-height: 6;
+    line-height: 1.6;
+}
+
+.minhas-redes{
+    clear: both;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 p{
@@ -210,6 +219,54 @@ input[type="submit"] {
     color: var(--cor-secundaria-texto);
 } 
 
+#meusProjetos.card{
+    width:30%;
+}
+
+.botao{
+    padding: 0.5rem 1rem;
+    border:none;
+    border-radius: 4px;
+    margin: 0.3rem 0.3rem 0 0;
+    font-weight: bold;
+}
+
+.botao:hover{
+    cursor: pointer;
+    background-color: var(--cor-secundaria);
+}
+
+.botao-demo,
+.botao-continue{
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo-pagina);
+}
+.botao-compartilhar{
+    background-color: var(--cor-bordas);
+}
+.botao-compartilhar:hover{
+    background-color: var(--cor-secundaria);
+}
+
+.artigos{
+    justify-content: space-evenly;
+}
+
+.artigos article{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 1rem;
+    border-left: 5px solid var(--cor-primaria);
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.artigos h3 {
+    margin-top: 0;
+    color: var(--cor-fundo-pagina);
+    margin-bottom: 1rem;
+}
 .cards-em-linha{
     display: flex;
     flex-direction: row;
