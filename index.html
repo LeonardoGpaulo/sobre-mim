@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark" data-theme="alto">
     <head>
         <!-- Meta informações sobre a pagina -->
         <meta charset="utf-8">
@@ -8,7 +8,7 @@
 
         <!-- CSS Reset -->
         <link rel="stylesheet" href="reset.css">
-
+ 
         <!-- CSS externo (arquivo style) -->
         <link rel="stylesheet" href="style.css">
 
@@ -23,9 +23,12 @@
         <header> 
             
             <nav>
-                <h1>
-                    PORTFÓLIO
-                </h1>
+                <nav>
+                    <h1>
+                        PORTFÓLIO
+                    </h1>
+                </nav>
+
                 <ul>
                     <li><a href="#sobreMim">Sobre mim</a></li>
                     <li><a href="#formaçãoAcademica">Formação</a></li>
@@ -34,14 +37,16 @@
                     <li><a href="#meusProjetos">Projetos</a></li>
                     <li><a href="#meusArtigos">Artigos</a></li>
                     <li><a href="#contato">Contato</a></li>
+                    <li><span id="botao-tema">🌱</span></li>
+                    <li><span id="botao-alto">👀</span></li>
                 </ul>
             </nav>
         </header>
         
         <section id="sobreMim">
             <h1>Sobre mim</h1>
-            <p>Sou aluno de tecnologia da informação no SENAI São paulo.</p>
             <img src="leonardo.jpg" alt="Foto de um homem branco com bigode e cavanhaque." width="200" title="Foto de um homem branco com bigode e cavanhaque."> 
+            <p>Sou aluno de tecnologia da informação no SENAI São paulo.</p>
             <ul>
             <li>
                 <a href="https://github.com/LeonardoGpaulo" title="Clique para acessar meu portfólio no GitHub" target="_blank">Acesse o meu Github</a>
@@ -170,11 +175,11 @@
         </section>
 
         <section id="contato">
-            <h2>Entre em contato comigo</h2>
+            <h1>Entre em contato comigo</h1>
             <form>
                 <input type="text" placeholder="Digite seu nome">
                 <input type="email" placeholder="email@exemplo.com">
-                <input type="tel" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"  placeholder="digite seu telefone (99) (99999-9999)">
+                <input type="tel" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"  placeholder="digite seu telefone (99) 99999-9999">
                 <textarea placeholder="digite sua mensagem" rows="5" cols="50"></textarea>
                 <input type="submit" name="botaoEnviar" value="solicitar contato">
             
@@ -196,6 +201,31 @@
                 
             <p>desenvolvido por leozinho🌱</p>
         </footer>
-        
+        <script>
+            document.querySelector("#botao-tema").addEventListener("click", trocaTema)
+
+            function trocaTema(){
+                const root = document.documentElement;
+
+                if (root.getAttribute("data-theme") === "dark"){
+                    root.removeAttribute("data-theme");
+                }else{
+                    root.setAttribute("data-theme", "dark");
+                }
+            }
+
+            document.querySelector("#botao-alto").addEventListener("click", trocaTemaAlto)
+
+            function trocaTemaAlto(){
+                const root = document.documentElement;
+
+                if (root.getAttribute("data-theme") === "alto"){
+                    root.removeAttribute("data-theme");
+                }else{
+                    root.setAttribute("data-theme", "alto");
+                }
+            }
+
+        </script>
     </body>
 </html> 

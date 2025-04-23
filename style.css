@@ -1,10 +1,46 @@
 
+:root{
+    --cor-primaria: #d81dbc;
+    --cor-secundaria: #ef14cb;
+    --cor-botao: #333;
+    --cor-fundo-pagina: #ffffff;
+    --cor-primaria-texto: #333;
+    --cor-secundaria-texto: #555;
+    --cor-bordas: #aaa;
+}
+
+[data-theme="dark"]{
+    --cor-primaria: #d81dbc;
+    --cor-secundaria: #ef14cb;
+    --cor-botao: #f8f4f1;
+    --cor-fundo-pagina: #211710;
+    --cor-fundo-cartao: #4e4032;
+    --cor-primaria-texto: #fff;
+    --cor-secundaria-texto: #ccc;
+    --cor-bordas: #aaa;
+}
+[data-theme="alto"]{
+    --cor-primaria: #ffffff;
+    --cor-secundaria: #000000;
+    --cor-botao: #000;
+    --cor-fundo-pagina: #000000;
+    --cor-fundo-cartao: #828282;
+    --cor-primaria-texto: #ffffff;
+    --cor-secundaria-texto: #CCC;
+    --cor-bordas: #ffff00;
+    --borda-cartao: 2px solid #ffff00;
+    --borda-botao: 2px solid #ffff00;
+}
+
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--cor-fundo-pagina);
+    color: var(--cor-primaria-texto)
 }
 
 nav h1 {
     text-align: center;
+    color: #000;
 }
 
 
@@ -12,18 +48,16 @@ h1 {
     font-size: 2rem;
     /* 1rem = 16pc -> 1em = "M" */
     font-weight: bold;
-    color: #000000;
+    color: var(--cor-primaria);
 }
-
-
 h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #5a0e0e
+    color: var(--cor-primaria)
 }
 
 header {
-    background-color: #5a0e0e;
+    background-color: var(--cor-primaria);
     padding: 1rem 2rem;
     box-shadow: 0 4px 8px rgba(86, 10, 10, 0.1);
     position: sticky;
@@ -37,7 +71,7 @@ header {
 }
 
 section a:hover {
-    background-color: #5a0e0e;
+    background-color: var(--cor-primaria);
 }
 
 header ul {
@@ -47,13 +81,14 @@ header ul {
 }
 
 header a {
-    color: #ffffff;
+    color: var(--cor-botao);
     font-weight: 700;
     padding: .5rem 1rem;
+    border:2px solid var(--cor-primaria)
 }
 
 header a:hover {
-    background-color: #023e8a;
+    background-color: var(--cor-secundaria);
 }
 
 img {
@@ -63,13 +98,14 @@ img {
 }
 
 section {
+    display:grid;
+    align-items: right;
     min-height: 80vh;
-    /* vh -> viewport height ( altura da viewport) */
     margin: 2rem;
     scroll-margin-top: 4rem;
     padding: 1rem;
-    border: 5px solid #000000;
-    /* overflow: hidden; */
+    border: 5px solid var(--cor-primaria);
+   
 }
 
 section#formaçãoAcademica,
@@ -86,6 +122,25 @@ section#contato{
     margin-bottom: 2rem;
 }
 
+#sobreMim{
+    display:block;
+}
+
+#sobreMim img {
+    float:left;
+    margin: 0.2rem 1rem 0;
+    width: 30vw;
+    border-radius: 50%;
+    border: 5px solid var(--cor-primaria);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .3);
+}
+
+#sobreMim p{
+    text-align: justify;
+    bottom: 1rem;
+    line-height: 6;
+}
+
 p{
     margin-bottom: 1rem;
 }
@@ -95,7 +150,7 @@ body {
 }
 
 section a {
-    color: rgb(19, 19, 177);
+    color: var(--cor-primaria);
 }
 
 form{
@@ -108,16 +163,16 @@ form{
 
 input,
 textarea {
-    border: 1px solid #ccc;
+    border: 1px solid var(--cor-primaria);
     border-radius: 4px;
     padding: .25rem .75rem;
-    color: #000000;
+    color: var(--cor-primaria-texto);
     resize: none;
 }
 
 input[type="submit"] {
-    background-color: #5a0e0e;
-    color: #ffffff;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
     padding: .25rem .75rem;
     border: none;
     font-weight: 700;
@@ -130,16 +185,18 @@ input[type="submit"] {
     padding: 2rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
     list-style: none;
+    background-color: var(--cor-fundo-cartao);
+    border: var(--borda-cartao);
 }
 
 .titulo-card{
     font-weight:bold;
-    color: #5a0e0e;
+    color: var(--cor-primaria);
     font-size: 1.3rem;
 }
 .instituicao-card{
     font-size: 1.1rem;
-    color: #555;
+    color: var(--cor-secundaria-texto);
 }
 
 .cards-em-coluna{
@@ -150,7 +207,7 @@ input[type="submit"] {
 
  .descricao-card{
     font-size: 1.1rem;
-    color: #555;
+    color: var(--cor-secundaria-texto);
 } 
 
 .cards-em-linha{
